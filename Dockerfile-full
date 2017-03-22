@@ -5,5 +5,7 @@ WORKDIR /usr/local/tomcat
 COPY data-integration/system /usr/local/tomcat/system
 COPY data-integration/plugins /usr/local/tomcat/plugins
 COPY data-integration/LICENSE.txt /usr/local/tomcat/webSpoon-LICENSE.txt
-ADD https://github.com/HiromuHota/big-data-plugin/releases/download/webspoon%2F$version/pentaho-big-data-legacy-6.1.0.1-196.jar /usr/local/tomcat/plugins/pentaho-big-data-plugin/
-ADD https://github.com/HiromuHota/big-data-plugin/releases/download/webspoon%2F$version/pentaho-big-data-kettle-plugins-common-ui-6.1.0.1-196.jar /usr/local/tomcat/system/karaf/system/pentaho/pentaho-big-data-kettle-plugins-common-ui/6.1.0.1-196/
+ADD https://github.com/HiromuHota/pdi-platform-utils-plugin/releases/download/webspoon%2F$version/pdi-platform-utils-plugin-7.0.0.0-25.jar /usr/local/tomcat/plugins/platform-utils-plugin/
+ADD https://github.com/HiromuHota/big-data-plugin/releases/download/webspoon%2F$version/pentaho-big-data-legacy-7.0.0.0-25.jar /usr/local/tomcat/plugins/pentaho-big-data-plugin/
+ADD https://github.com/HiromuHota/big-data-plugin/releases/download/webspoon%2F$version/pentaho-big-data-kettle-plugins-common-ui-7.0.0.0-25.jar /usr/local/tomcat/system/karaf/system/pentaho/pentaho-big-data-kettle-plugins-common-ui/7.0.0.0-25/
+ADD https://github.com/HiromuHota/pentaho-kettle/releases/download/webspoon%2F$version/repositories-plugin.jar /usr/local/tomcat/system/karaf/system/pentaho-kettle/repositories-plugin/7.0.0.0-25/repositories-plugin-7.0.0.0-25.jar
