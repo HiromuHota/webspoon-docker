@@ -9,6 +9,7 @@ $ docker build --build-arg version=0.7.0.8 -t hiromuhota/webspoon:latest .
 ## With plugins
 
 ```
+$ docker build -f ./Dockerfile-base -t hiromuhota/webspoon:0.7.0-base .
 $ docker build -f ./Dockerfile-full --build-arg version=0.7.0.8 -t hiromuhota/webspoon:latest-full .
 ```
 
