@@ -1,0 +1,10 @@
+FROM tomcat:jre8
+MAINTAINER Hiromu Hota <hiromu.hota@hal.hitachi.com>
+ENV tomcat /usr/local/tomcat
+RUN wget http://sourceforge.net/projects/pentaho/files/Data%20Integration/7.0/pdi-ce-7.0.0.0-25.zip && \
+  unzip pdi-ce-7.0.0.0-25.zip && \
+  mv data-integration/system ${tomcat}/system && \
+  mv data-integration/plugins ${tomcat}/plugins && \
+  mv data-integration/LICENSE.txt ${tomcat}/webSpoon-LICENSE.txt && \
+  rm pdi-ce-7.0.0.0-25.zip && \
+  rm -rf data-integration

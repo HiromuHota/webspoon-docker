@@ -1,11 +1,9 @@
-FROM hiromuhota/webspoon:latest
+FROM hiromuhota/webspoon:0.7.0-base
 ARG version
 MAINTAINER Hiromu Hota <hiromu.hota@hal.hitachi.com>
 ENV tomcat /usr/local/tomcat
 WORKDIR ${tomcat}
-COPY data-integration/system ${tomcat}/system
-COPY data-integration/plugins ${tomcat}/plugins
-COPY data-integration/LICENSE.txt ${tomcat}/webSpoon-LICENSE.txt
+ADD https://github.com/HiromuHota/pentaho-kettle/releases/download/webspoon%2F$version/spoon.war ${tomcat}/webapps/
 ADD https://github.com/HiromuHota/pdi-platform-utils-plugin/releases/download/webspoon%2F$version/pdi-platform-utils-plugin-7.0.0.0-25.jar ${tomcat}/plugins/platform-utils-plugin/
 ADD https://github.com/HiromuHota/big-data-plugin/releases/download/webspoon%2F$version/pentaho-big-data-legacy-7.0.0.0-25.jar ${tomcat}/plugins/pentaho-big-data-plugin/
 ADD https://github.com/HiromuHota/big-data-plugin/releases/download/webspoon%2F$version/pentaho-big-data-kettle-plugins-common-ui-7.0.0.0-25.jar ${tomcat}/system/karaf/system/pentaho/pentaho-big-data-kettle-plugins-common-ui/7.0.0.0-25/
