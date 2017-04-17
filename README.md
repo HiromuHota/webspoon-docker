@@ -15,14 +15,16 @@ $ docker build -f ./Dockerfile-full --build-arg version=0.7.0.8 -t hiromuhota/we
 
 # How to use the image
 
+The recommended Java heap size is `-Xms1024m -Xmx2048m`.
+
 ## Without plugins
 
 ```
-$ docker run -d -p 8080:8080 hiromuhota/webspoon:latest
+$ docker run -e JAVA_OPTS="-Xms1024m -Xmx2048m" -d -p 8080:8080 hiromuhota/webspoon:latest
 ```
 
 ## With plugins
 
 ```
-$ docker run -d -p 8080:8080 -p 9051:9051 hiromuhota/webspoon:latest-full
+$ docker run -e JAVA_OPTS="-Xms1024m -Xmx2048m" -d -p 8080:8080 -p 9051:9051 hiromuhota/webspoon:latest-full
 ```
