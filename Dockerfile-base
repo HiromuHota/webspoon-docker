@@ -5,6 +5,8 @@ RUN wget http://sourceforge.net/projects/pentaho/files/Data%20Integration/7.0/pd
   unzip pdi-ce-7.0.0.0-25.zip && \
   mv data-integration/system ${tomcat}/system && \
   mv data-integration/plugins ${tomcat}/plugins && \
+  mv data-integration/simple-jndi ${tomcat}/simple-jndi && \
+  mv data-integration/samples ${tomcat}/samples && \
   mv data-integration/LICENSE.txt ${tomcat}/webSpoon-LICENSE.txt && \
   rm pdi-ce-7.0.0.0-25.zip && \
   rm -rf data-integration
