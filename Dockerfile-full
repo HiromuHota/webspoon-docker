@@ -1,7 +1,6 @@
 FROM hiromuhota/webspoon:0.7.0-base
 MAINTAINER Hiromu Hota <hiromu.hota@hal.hitachi.com>
 ARG version=0.7.0.9
-WORKDIR ${CATALINA_HOME}
 ADD https://github.com/HiromuHota/pentaho-kettle/releases/download/webspoon%2F$version/spoon.war ${CATALINA_HOME}/webapps/
 ADD https://github.com/HiromuHota/pdi-platform-utils-plugin/releases/download/webspoon%2F$version/pdi-platform-utils-plugin-7.0.0.0-25.jar ${CATALINA_HOME}/plugins/platform-utils-plugin/
 ADD https://github.com/HiromuHota/big-data-plugin/releases/download/webspoon%2F$version/pentaho-big-data-legacy-7.0.0.0-25.jar ${CATALINA_HOME}/plugins/pentaho-big-data-plugin/
