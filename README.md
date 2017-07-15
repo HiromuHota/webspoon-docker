@@ -3,14 +3,14 @@
 ## Without plugins
 
 ```
-$ docker build --build-arg version=0.7.1.10 -t hiromuhota/webspoon:latest .
+$ docker build --build-arg version=0.7.1.11 -t hiromuhota/webspoon:latest .
 ```
 
 ## With plugins
 
 ```
 $ docker build -f ./Dockerfile-base -t hiromuhota/webspoon:0.7.1-base .
-$ docker build -f ./Dockerfile-full --build-arg version=0.7.1.10 -t hiromuhota/webspoon:latest-full .
+$ docker build -f ./Dockerfile-full --build-arg version=0.7.1.11 -t hiromuhota/webspoon:latest-full .
 ```
 
 # How to use the image

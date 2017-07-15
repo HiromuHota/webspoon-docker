@@ -1,5 +1,6 @@
 FROM tomcat:jre8
 MAINTAINER Hiromu Hota <hiromu.hota@hal.hitachi.com>
+RUN rm /etc/java-8-openjdk/accessibility.properties
 RUN wget http://sourceforge.net/projects/pentaho/files/Data%20Integration/7.1/pdi-ce-7.1.0.0-12.zip && \
   unzip pdi-ce-7.1.0.0-12.zip && \
   mv data-integration/system ${CATALINA_HOME}/system && \
