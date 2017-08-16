@@ -4,7 +4,6 @@ services:
     image: hiromuhota/webspoon:latest-full
     ports:
       - "8080:8080"
-      - "9051:9051"
     volumes:
       - kettle:/root/.kettle
       - pentaho:/root/.pentaho

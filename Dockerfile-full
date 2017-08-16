@@ -1,6 +1,6 @@
 FROM hiromuhota/webspoon:0.7.1-base
 MAINTAINER Hiromu Hota <hiromu.hota@hal.hitachi.com>
-ARG version=0.7.1.11
+ARG version=0.7.1.12
 ARG pdiver=7.1.0.0-12
 ADD https://github.com/HiromuHota/pentaho-kettle/releases/download/webspoon%2F$version/spoon.war ${CATALINA_HOME}/webapps/
 ADD https://github.com/HiromuHota/pdi-platform-utils-plugin/releases/download/webspoon%2F$version/pdi-platform-utils-plugin-$pdiver.jar ${CATALINA_HOME}/plugins/platform-utils-plugin/
@@ -9,4 +9,5 @@ ADD https://github.com/HiromuHota/big-data-plugin/releases/download/webspoon%2F$
 ADD https://github.com/HiromuHota/pentaho-kettle/releases/download/webspoon%2F$version/repositories-plugin-core-$pdiver.jar ${CATALINA_HOME}/system/karaf/system/org/pentaho/repositories-plugin-core/$pdiver/
 ADD https://github.com/HiromuHota/pentaho-kettle/releases/download/webspoon%2F$version/pdi-engine-configuration-ui-$pdiver.jar ${CATALINA_HOME}/system/karaf/system/org/pentaho/pdi-engine-configuration-ui/$pdiver/
 ADD https://github.com/HiromuHota/pdi-dataservice-server-plugin/releases/download/webspoon%2F$version/pdi-dataservice-server-plugin-$pdiver.jar ${CATALINA_HOME}/system/karaf/system/pentaho/pdi-dataservice-server-plugin/$pdiver/
+ADD https://github.com/HiromuHota/marketplace/releases/download/webspoon%2F$version/pentaho-marketplace-di-$pdiver.jar ${CATALINA_HOME}/system/karaf/system/org/pentaho/pentaho-marketplace-di/$pdiver/pentaho-marketplace-di-$pdiver.jar
 COPY org.pentaho.requirejs.cfg ${CATALINA_HOME}/system/karaf/etc/org.pentaho.requirejs.cfg
