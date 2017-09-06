@@ -44,3 +44,9 @@ or execute the following docker-compose command
 ```
 $ docker-compose up -d
 ```
+
+## Debug
+
+```
+$ docker run -e JAVA_OPTS="-Xms1024m -Xmx2048m" -e JPDA_ADDRESS=8000 -d -p 8080:8080 -p 8000:8000 hiromuhota/webspoon:latest-full catalina.sh jpda run
+```
