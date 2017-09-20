@@ -6,5 +6,4 @@ ARG version=0.$base.$patch
 ARG dist=7.1.0.0-12
 
 COPY install.sh /tmp/install.sh
-RUN chmod +x /tmp/install.sh && \
-  /tmp/install.sh
+RUN sh /tmp/install.sh
