@@ -17,5 +17,8 @@ wget https://github.com/HiromuHota/marketplace/releases/download/webspoon%2F$ver
 echo 'Configuring org.pentaho.requirejs.cfg'
 echo 'context.root=/spoon/osgi' | tee ${CATALINA_HOME}/system/karaf/etc/org.pentaho.requirejs.cfg
 
+echo 'Configuring custom.properties'
+wget https://raw.githubusercontent.com/HiromuHota/pentaho-karaf-assembly/webspoon%2F$version/pentaho-karaf-assembly/src/main/filtered-resources/etc/custom.properties -O ${CATALINA_HOME}/system/karaf/etc/custom.properties
+
 echo 'Removing Karaf cache'
 rm -rf ${CATALINA_HOME}/system/karaf/caches/webspoonservletcontextlistener || true
