@@ -9,10 +9,12 @@ wget https://github.com/HiromuHota/pentaho-kettle/releases/download/webspoon%2F$
 wget https://github.com/HiromuHota/pdi-platform-utils-plugin/releases/download/webspoon%2F$version/pdi-platform-utils-plugin-$dist.jar -O ${CATALINA_HOME}/plugins/platform-utils-plugin/pdi-platform-utils-plugin-$dist.jar
 wget https://github.com/HiromuHota/big-data-plugin/releases/download/webspoon%2F$version/pentaho-big-data-legacy-$dist.jar -O ${CATALINA_HOME}/plugins/pentaho-big-data-plugin/pentaho-big-data-legacy-$dist.jar
 wget https://github.com/HiromuHota/big-data-plugin/releases/download/webspoon%2F$version/pentaho-big-data-kettle-plugins-common-ui-$dist.jar -O ${CATALINA_HOME}/system/karaf/system/pentaho/pentaho-big-data-kettle-plugins-common-ui/$dist/pentaho-big-data-kettle-plugins-common-ui-$dist.jar
-wget https://github.com/HiromuHota/pentaho-kettle/releases/download/webspoon%2F$version/repositories-plugin-core-$dist.jar -O ${CATALINA_HOME}/system/karaf/system/org/pentaho/repositories-plugin-core/$dist/repositories-plugin-core-$dist.jar
-wget https://github.com/HiromuHota/pentaho-kettle/releases/download/webspoon%2F$version/pdi-engine-configuration-ui-$dist.jar -O ${CATALINA_HOME}/system/karaf/system/org/pentaho/pdi-engine-configuration-ui/$dist/pdi-engine-configuration-ui-$dist.jar
+wget https://github.com/HiromuHota/pentaho-kettle/releases/download/webspoon%2F$version/repositories-plugin-core-$dist.jar -O ${CATALINA_HOME}/system/karaf/system/org/pentaho/di/plugins/repositories-plugin-core/$dist/repositories-plugin-core-$dist.jar
+wget https://github.com/HiromuHota/pentaho-kettle/releases/download/webspoon%2F$version/pdi-engine-configuration-ui-$dist.jar -O ${CATALINA_HOME}/system/karaf/system/org/pentaho/di/plugins/pdi-engine-configuration-ui/$dist/pdi-engine-configuration-ui-$dist.jar
+wget https://github.com/HiromuHota/pentaho-kettle/releases/download/webspoon%2F$version/file-open-save-core-$dist.jar -O ${CATALINA_HOME}/system/karaf/system/org/pentaho/di/plugins/file-open-save-core/$dist/file-open-save-core-$dist.jar
 wget https://github.com/HiromuHota/pdi-dataservice-server-plugin/releases/download/webspoon%2F$version/pdi-dataservice-server-plugin-$dist.jar -O ${CATALINA_HOME}/system/karaf/system/pentaho/pdi-dataservice-server-plugin/$dist/pdi-dataservice-server-plugin-$dist.jar
 wget https://github.com/HiromuHota/marketplace/releases/download/webspoon%2F$version/pentaho-marketplace-di-$dist.jar -O ${CATALINA_HOME}/system/karaf/system/org/pentaho/pentaho-marketplace-di/$dist/pentaho-marketplace-di-$dist.jar
+wget https://github.com/HiromuHota/pentaho-osgi-bundles/releases/download/webspoon%2F$version/pentaho-i18n-webservice-bundle-$dist.jar -O ${CATALINA_HOME}/system/karaf/system/pentaho/pentaho-i18n-webservice-bundle/$dist/pentaho-i18n-webservice-bundle-$dist.jar
 
 echo 'Configuring org.pentaho.requirejs.cfg'
 echo 'context.root=/spoon/osgi' | tee ${CATALINA_HOME}/system/karaf/etc/org.pentaho.requirejs.cfg

@@ -1,12 +1,12 @@
 FROM tomcat:jre8
 MAINTAINER Hiromu Hota <hiromu.hota@hal.hitachi.com>
 RUN rm /etc/java-8-openjdk/accessibility.properties
-RUN wget http://sourceforge.net/projects/pentaho/files/Data%20Integration/7.1/pdi-ce-7.1.0.0-12.zip && \
-  unzip pdi-ce-7.1.0.0-12.zip && \
+RUN wget https://sourceforge.net/projects/pentaho/files/Pentaho%208.0/client-tools/pdi-ce-8.0.0.0-28.zip && \
+  unzip pdi-ce-8.0.0.0-28.zip && \
   mv data-integration/system ${CATALINA_HOME}/system && \
   mv data-integration/plugins ${CATALINA_HOME}/plugins && \
   mv data-integration/simple-jndi ${CATALINA_HOME}/simple-jndi && \
   mv data-integration/samples ${CATALINA_HOME}/samples && \
   mv data-integration/LICENSE.txt ${CATALINA_HOME}/webSpoon-LICENSE.txt && \
-  rm pdi-ce-7.1.0.0-12.zip && \
+  rm pdi-ce-8.0.0.0-28.zip && \
   rm -rf data-integration

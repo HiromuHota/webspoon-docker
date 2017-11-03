@@ -1,9 +1,9 @@
-FROM hiromuhota/webspoon:0.7.1-base
+FROM hiromuhota/webspoon:0.8.0-base
 MAINTAINER Hiromu Hota <hiromu.hota@hal.hitachi.com>
-ARG base=7.1
+ARG base=8.0
 ARG patch=13
 ARG version=0.$base.$patch
-ARG dist=7.1.0.0-12
+ARG dist=8.0.0.0-28
 
 COPY install.sh /tmp/install.sh
 RUN sh /tmp/install.sh
