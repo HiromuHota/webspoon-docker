@@ -15,6 +15,7 @@ wget https://github.com/HiromuHota/pentaho-kettle/releases/download/webspoon%2F$
 wget https://github.com/HiromuHota/pdi-dataservice-server-plugin/releases/download/webspoon%2F$version/pdi-dataservice-server-plugin-$dist.jar -O ${CATALINA_HOME}/system/karaf/system/pentaho/pdi-dataservice-server-plugin/$dist/pdi-dataservice-server-plugin-$dist.jar
 wget https://github.com/HiromuHota/marketplace/releases/download/webspoon%2F$version/pentaho-marketplace-di-$dist.jar -O ${CATALINA_HOME}/system/karaf/system/org/pentaho/pentaho-marketplace-di/$dist/pentaho-marketplace-di-$dist.jar
 wget https://github.com/HiromuHota/pentaho-osgi-bundles/releases/download/webspoon%2F$version/pentaho-i18n-webservice-bundle-$dist.jar -O ${CATALINA_HOME}/system/karaf/system/pentaho/pentaho-i18n-webservice-bundle/$dist/pentaho-i18n-webservice-bundle-$dist.jar
+wget https://github.com/HiromuHota/pentaho-osgi-bundles/releases/download/webspoon%2F$version/pentaho-kettle-repository-locator-impl-spoon-$dist.jar -O ${CATALINA_HOME}/system/karaf/system/pentaho/pentaho-kettle-repository-locator-impl-spoon/$dist/pentaho-kettle-repository-locator-impl-spoon-$dist.jar
 
 echo 'Configuring org.pentaho.requirejs.cfg'
 echo 'context.root=/spoon/osgi' | tee ${CATALINA_HOME}/system/karaf/etc/org.pentaho.requirejs.cfg
