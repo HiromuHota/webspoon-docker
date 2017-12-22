@@ -9,7 +9,7 @@ $ docker build -t hiromuhota/webspoon:latest .
 ## With plugins
 
 ```
-$ docker build -f ./Dockerfile-base -t hiromuhota/webspoon:0.7.1-base .
+$ docker build -f ./Dockerfile-base -t hiromuhota/webspoon:0.8.0-base .
 $ docker build --no-cache -f ./Dockerfile-full -t hiromuhota/webspoon:latest-full .
 ```
 
