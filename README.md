@@ -10,7 +10,7 @@ $ docker build -t hiromuhota/webspoon:latest .
 
 ```
 $ docker build -f ./Dockerfile-base -t hiromuhota/webspoon:0.7.1-base .
-$ docker build -f ./Dockerfile-full -t hiromuhota/webspoon:latest-full .
+$ docker build --no-cache -f ./Dockerfile-full -t hiromuhota/webspoon:latest-full .
 ```
 
 # How to use the image
