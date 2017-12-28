@@ -31,6 +31,8 @@ $ docker run -e JAVA_OPTS="-Xms1024m -Xmx2048m" -d -p 8080:8080 hiromuhota/websp
 $ docker run -e JAVA_OPTS="-Xms1024m -Xmx2048m" -d -p 8080:8080 hiromuhota/webspoon:latest-full
 ```
 
+In either case, please access `http://ip-address:8080/spoon/spoon`.
+
 ## Advanced usage
 
 If the configuration files should be shared among containers, add `-v kettle:/root/.kettle -v pentaho:/root/.pentaho` as
