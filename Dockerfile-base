@@ -1,6 +1,10 @@
 FROM tomcat:jre8
 MAINTAINER Hiromu Hota <hiromu.hota@hal.hitachi.com>
 RUN rm /etc/java-8-openjdk/accessibility.properties
+RUN rm -rf ${CATALINA_HOME}/webapps/* \
+    && mkdir ${CATALINA_HOME}/webapps/ROOT \
+    && echo "<% response.sendRedirect(\"spoon\"); %>" > ${CATALINA_HOME}/webapps/ROOT/index.jsp
+
 RUN wget https://sourceforge.net/projects/pentaho/files/Pentaho%208.0/client-tools/pdi-ce-8.0.0.0-28.zip && \
   unzip pdi-ce-8.0.0.0-28.zip && \
   mv data-integration/system ${CATALINA_HOME}/system && \
