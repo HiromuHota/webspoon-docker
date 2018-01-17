@@ -23,5 +23,9 @@ echo 'context.root=/spoon/osgi' | tee ${CATALINA_HOME}/system/karaf/etc/org.pent
 echo 'Configuring custom.properties'
 wget https://raw.githubusercontent.com/HiromuHota/pentaho-karaf-assembly/webspoon%2F$version/pentaho-karaf-assembly/src/main/filtered-resources/etc/custom.properties -O ${CATALINA_HOME}/system/karaf/etc/custom.properties
 
+echo 'Configuring Carte'
+mkdir ${CATALINA_HOME}/system/kettle
+wget https://raw.githubusercontent.com/HiromuHota/webspoon-docker/master/slave-server-config.xml -O ${CATALINA_HOME}/system/kettle/slave-server-config.xml
+
 echo 'Removing Karaf cache'
 rm -rf ${CATALINA_HOME}/system/karaf/caches/webspoonservletcontextlistener || true
