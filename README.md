@@ -57,10 +57,11 @@ $ docker-compose up -d
 
 ### Security manager
 
-To enable the [custom security manager](https://github.com/HiromuHota/pentaho-kettle/wiki/Security#file-access-control-by-a-custom-security-manager-experimental), add `-e CATALINA_OPTS="-Djava.security.manager=org.pentaho.di.security.WebSpoonSecurityManager -Djava.security.policy=/usr/local/tomcat/conf/catalina.policy"` to the run command.
+To enable the [custom security manager](https://github.com/HiromuHota/pentaho-kettle/wiki/Security#file-access-control-by-a-custom-security-manager-experimental), enable [user authentication
+](https://github.com/HiromuHota/pentaho-kettle#user-authentication) and add `-e CATALINA_OPTS="-Djava.security.manager=org.pentaho.di.security.WebSpoonSecurityManager -Djava.security.policy=/usr/local/tomcat/conf/catalina.policy"` to the run command.
 
 ```
-$ docker run -d -p 8080:8080 -e CATALINA_OPTS="-Djava.security.manager=org.pentaho.di.security.WebSpoonSecurityManager -Djava.security.policy=/usr/local/tomcat/conf/catalina.policy" webspoon:nightly-full
+$ docker run -d -p 8080:8080 -e CATALINA_OPTS="-Djava.security.manager=org.pentaho.di.security.WebSpoonSecurityManager -Djava.security.policy=/usr/local/tomcat/conf/catalina.policy" hiromuhota/webspoon:nightly-full
 ```
 
 Remember to use the image of `webspoon:nightly-full` because the lastest release (0.8.0.13) does not have the custom security manager yet.
