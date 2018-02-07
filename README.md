@@ -55,16 +55,26 @@ or execute the following docker-compose command
 $ docker-compose up -d
 ```
 
+### webSpoon config
+
+From 0.8.0.14, spoon.war is pre-extracted at `$CATALINA_HOME/webapps/spoon` so that configs such as `web.xml` can be configured at run-time using a bind mount.
+If you want to enable user authentication, for example, download [web.xml](https://github.com/HiromuHota/pentaho-kettle/blob/webspoon-8.0/assemblies/pdi-ce/src/main/resources-filtered/WEB-INF/web.xml) and edit it as described [here](https://github.com/HiromuHota/pentaho-kettle#user-authentication).
+Then add `-v $(pwd)/web.xml:/usr/local/tomcat/webapps/spoon/WEB-INF/web.xml` to the command.
+
+```
+$ docker run -d -p 8080:8080 -v $(pwd)/web.xml:/usr/local/tomcat/webapps/spoon/WEB-INF/web.xml hiromuhota/webspoon:lastest-full
+```
+
+Similarly, `$CATALINA_HOME/webapps/spoon/WEB-INF/spring/security.xml` can be configured at run-time.
+
 ### Security manager
 
 To enable the [custom security manager](https://github.com/HiromuHota/pentaho-kettle/wiki/Security#file-access-control-by-a-custom-security-manager-experimental), enable [user authentication
 ](https://github.com/HiromuHota/pentaho-kettle#user-authentication) and add `-e CATALINA_OPTS="-Djava.security.manager=org.pentaho.di.security.WebSpoonSecurityManager -Djava.security.policy=/usr/local/tomcat/conf/catalina.policy"` to the run command.
 
 ```
-$ docker run -d -p 8080:8080 -e CATALINA_OPTS="-Djava.security.manager=org.pentaho.di.security.WebSpoonSecurityManager -Djava.security.policy=/usr/local/tomcat/conf/catalina.policy" hiromuhota/webspoon:nightly-full
+$ docker run -d -p 8080:8080 -e CATALINA_OPTS="-Djava.security.manager=org.pentaho.di.security.WebSpoonSecurityManager -Djava.security.policy=/usr/local/tomcat/conf/catalina.policy" -v $(pwd)/web.xml:/usr/local/tomcat/webapps/spoon/WEB-INF/web.xml hiromuhota/webspoon:latest-full
 ```
-
-Remember to use the image of `webspoon:nightly-full` because the lastest release (0.8.0.13) does not have the custom security manager yet.
 
 ## Debug
 
