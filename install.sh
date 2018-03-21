@@ -34,3 +34,6 @@ wget https://raw.githubusercontent.com/HiromuHota/webspoon-docker/master/slave-s
 
 echo 'Removing Karaf cache'
 rm -rf ${CATALINA_HOME}/system/karaf/caches/webspoonservletcontextlistener || true
+
+echo 'Replacing log4j.xml at plugins/kettle5-log4j-plugin/'
+wget https://raw.githubusercontent.com/HiromuHota/pentaho-kettle/webspoon%2F$version/plugins/log4j/core/src/main/resources/log4j.xml -O ${CATALINA_HOME}/plugins/kettle5-log4j-plugin/log4j.xml
