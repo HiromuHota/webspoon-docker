@@ -79,5 +79,5 @@ $ docker run -d -p 8080:8080 -e CATALINA_OPTS="-Djava.security.manager=org.penta
 ## Debug
 
 ```
-$ docker run -e JAVA_OPTS="-Xms1024m -Xmx2048m" -e JPDA_ADDRESS=8000 -d -p 8080:8080 -p 8000:8000 hiromuhota/webspoon:latest-full catalina.sh jpda run
+$ docker run -e JAVA_OPTS="-Xms1024m -Xmx2048m" -e JPDA_ADDRESS=8000 -e CATALINA_OPTS="-Dorg.eclipse.rap.rwt.developmentMode=true" -d -p 8080:8080 -p 8000:8000 hiromuhota/webspoon:latest-full catalina.sh jpda run
 ```
