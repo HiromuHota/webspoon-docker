@@ -5,12 +5,12 @@ RUN rm -rf ${CATALINA_HOME}/webapps/* \
     && mkdir ${CATALINA_HOME}/webapps/ROOT \
     && echo "<% response.sendRedirect(\"spoon\"); %>" > ${CATALINA_HOME}/webapps/ROOT/index.jsp
 
-RUN wget https://sourceforge.net/projects/pentaho/files/Pentaho%208.0/client-tools/pdi-ce-8.0.0.0-28.zip && \
-  unzip pdi-ce-8.0.0.0-28.zip && \
+RUN wget https://sourceforge.net/projects/pentaho/files/Pentaho%208.1/client-tools/pdi-ce-8.1.0.0-365.zip && \
+  unzip pdi-ce-8.1.0.0-365.zip && \
   mv data-integration/system ${CATALINA_HOME}/system && \
   mv data-integration/plugins ${CATALINA_HOME}/plugins && \
   mv data-integration/simple-jndi ${CATALINA_HOME}/simple-jndi && \
   mv data-integration/samples ${CATALINA_HOME}/samples && \
   mv data-integration/LICENSE.txt ${CATALINA_HOME}/webSpoon-LICENSE.txt && \
-  rm pdi-ce-8.0.0.0-28.zip && \
+  rm pdi-ce-8.1.0.0-365.zip && \
   rm -rf data-integration

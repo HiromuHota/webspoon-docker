@@ -6,10 +6,10 @@ RUN rm -rf ${CATALINA_HOME}/webapps/* \
     && mkdir ${CATALINA_HOME}/webapps/ROOT \
     && echo "<% response.sendRedirect(\"spoon\"); %>" > ${CATALINA_HOME}/webapps/ROOT/index.jsp
 
-ARG base=8.0
+ARG base=8.1
 ARG patch=16
 ARG version=0.$base.$patch
-ARG dist=8.0.0.0-28
+ARG dist=8.1.0.0-365
 RUN wget https://github.com/HiromuHota/pentaho-kettle/releases/download/webspoon%2F$version/spoon.war \
     && mkdir ${CATALINA_HOME}/webapps/spoon \
     && unzip -q spoon.war -d ${CATALINA_HOME}/webapps/spoon \

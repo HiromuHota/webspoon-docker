@@ -11,7 +11,7 @@ unzip -q spoon.war -d ${CATALINA_HOME}/webapps/spoon
 rm spoon.war
 
 echo 'Downloading and replacing plugins'
-wget https://github.com/HiromuHota/pdi-platform-utils-plugin/releases/download/webspoon%2F$version/pdi-platform-utils-plugin-$dist.jar -O ${CATALINA_HOME}/plugins/platform-utils-plugin/pdi-platform-utils-plugin-$dist.jar
+wget https://github.com/HiromuHota/pdi-platform-utils-plugin/releases/download/webspoon%2F$version/pdi-platform-utils-plugin-core-$dist.jar -O ${CATALINA_HOME}/plugins/platform-utils-plugin/pdi-platform-utils-plugin-core-$dist.jar
 wget https://github.com/HiromuHota/big-data-plugin/releases/download/webspoon%2F$version/pentaho-big-data-legacy-$dist.jar -O ${CATALINA_HOME}/plugins/pentaho-big-data-plugin/pentaho-big-data-legacy-$dist.jar
 wget https://github.com/HiromuHota/big-data-plugin/releases/download/webspoon%2F$version/pentaho-big-data-kettle-plugins-common-ui-$dist.jar -O ${CATALINA_HOME}/system/karaf/system/pentaho/pentaho-big-data-kettle-plugins-common-ui/$dist/pentaho-big-data-kettle-plugins-common-ui-$dist.jar
 wget https://github.com/HiromuHota/pentaho-kettle/releases/download/webspoon%2F$version/repositories-plugin-core-$dist.jar -O ${CATALINA_HOME}/system/karaf/system/org/pentaho/di/plugins/repositories-plugin-core/$dist/repositories-plugin-core-$dist.jar
