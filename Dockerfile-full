@@ -2,7 +2,7 @@ FROM hiromuhota/webspoon:0.8.1-base
 MAINTAINER Hiromu Hota <hiromu.hota@hal.hitachi.com>
 ENV JAVA_OPTS="-Xms1024m -Xmx2048m"
 ARG base=8.1
-ARG patch=16
+ARG patch=17
 ARG version=0.$base.$patch
 ARG dist=8.1.0.0-365
 
