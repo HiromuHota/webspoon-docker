@@ -1,10 +1,10 @@
-FROM hiromuhota/webspoon:0.8.1-base
+FROM hiromuhota/webspoon:0.8.2-base
 MAINTAINER Hiromu Hota <hiromu.hota@hal.hitachi.com>
 ENV JAVA_OPTS="-Xms1024m -Xmx2048m"
-ARG base=8.1
+ARG base=8.2
 ARG patch=17
 ARG version=0.$base.$patch
-ARG dist=8.1.0.0-365
+ARG dist=8.2.0.0-342
 
 COPY install.sh /tmp/install.sh
 RUN sh /tmp/install.sh

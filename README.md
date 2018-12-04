@@ -3,13 +3,13 @@
 ## Without plugins
 
 ```
-$ docker build -t hiromuhota/webspoon:latest .
+$ docker build --no-cache -t hiromuhota/webspoon:latest .
 ```
 
 ## With plugins
 
 ```
-$ docker build -f ./Dockerfile-base -t hiromuhota/webspoon:0.8.1-base .
+$ docker build -f ./Dockerfile-base -t hiromuhota/webspoon:0.8.2-base .
 $ docker build --no-cache -f ./Dockerfile-full -t hiromuhota/webspoon:latest-full .
 ```
 
@@ -58,7 +58,7 @@ $ docker-compose up -d
 ### webSpoon config
 
 From 0.8.0.14, spoon.war is pre-extracted at `$CATALINA_HOME/webapps/spoon` so that configs such as `web.xml` can be configured at run-time using a bind mount.
-If you want to enable user authentication, for example, download [web.xml](https://github.com/HiromuHota/pentaho-kettle/blob/webspoon-8.1/assemblies/static/src/main/resources-filtered/WEB-INF/web.xml) and edit it as described [here](https://github.com/HiromuHota/pentaho-kettle#user-authentication).
+If you want to enable user authentication, for example, download [web.xml](https://github.com/HiromuHota/pentaho-kettle/blob/webspoon-8.2/assemblies/static/src/main/resources-filtered/WEB-INF/web.xml) and edit it as described [here](https://github.com/HiromuHota/pentaho-kettle#user-authentication).
 Then add `-v $(pwd)/web.xml:/usr/local/tomcat/webapps/spoon/WEB-INF/web.xml` to the command.
 
 ```
