@@ -1,3 +1,14 @@
+# Tags
+
+| Tag | 0.8.1.ZZ and lower | 0.8.2.ZZ | 0.9.0.ZZ and higher |
+| --- | --- | --- | --- |
+| nightly | Latest commit of webSpoon without plugins | Latest commit of webSpoon with plugins | <-- Ditto |
+| nightly-full | Latest commit of webSpoon with plugins | Identical to nightly, but deprecated | Discontinued |
+| latest | Latest release of webSpoon without plugins | Latest release of webSpoon with plugins | <-- Ditto |
+| latest-full | Latest release of webSpoon with plugins | Identical to latest, but deprecated | Discontinued |
+| 0.X.Y.ZZ | 0.X.Y.ZZ of webSpoon without plugins | 0.X.Y.ZZ of webSpoon with plugins | <-- Ditto |
+| 0.X.Y.ZZ-full | 0.X.Y.ZZ of webSpoon with plugins | Identical to 0.X.Y.ZZ, but deprecated | Discontinued |
+
 # How to build an image
 
 ## Without plugins
