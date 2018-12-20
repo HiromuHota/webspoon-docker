@@ -3,7 +3,7 @@
   "containerDefinitions": [
     {
       "name": "webSpoon",
-      "image": "hiromuhota/webspoon:latest-full",
+      "image": "hiromuhota/webspoon",
       "essential": true,
       "memory": 1920,
       "environment": [
