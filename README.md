@@ -77,6 +77,7 @@ To enable the [custom security manager](https://github.com/HiromuHota/pentaho-ke
 $ docker run -d -p 8080:8080 \
 -e CATALINA_OPTS="-Djava.security.manager=org.pentaho.di.security.WebSpoonSecurityManager -Djava.security.policy=/usr/local/tomcat/conf/catalina.policy" \
 -v $(pwd)/web.xml:/usr/local/tomcat/webapps/spoon/WEB-INF/web.xml \
+-v $(pwd)/catalina.policy:/usr/local/tomcat/conf/catalina.policy \
 hiromuhota/webspoon
 ```
 
