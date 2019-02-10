@@ -6,27 +6,5 @@ RUN rm -rf ${CATALINA_HOME}/webapps/* \
     && mkdir ${CATALINA_HOME}/webapps/ROOT \
     && echo "<% response.sendRedirect(\"spoon\"); %>" > ${CATALINA_HOME}/webapps/ROOT/index.jsp
 
-
-# simple-jndi
-# LICENSE.txt
-# system/
-RUN wget -q https://nexus.pentaho.org/repository/proxy-pentaho-public-release-group/org/pentaho/di/pdi-static/$dist/pdi-static-$dist.zip && \
-  unzip -q pdi-static-$dist.zip system/* simple-jndi/* LICENSE.txt && \
-  mv LICENSE.txt webSpoon-LICENSE.txt && \
-  rm pdi-static-$dist.zip
-
-# system/karaf
-RUN wget -q https://nexus.pentaho.org/repository/proxy-pentaho-public-release-group/pentaho/pentaho-karaf-assembly/$dist/pentaho-karaf-assembly-$dist-client.zip && \
-  unzip -q pentaho-karaf-assembly-$dist-client.zip && \
-  mv pentaho-karaf-assembly system/karaf && \
-  rm pentaho-karaf-assembly-$dist-client.zip
-
-# plugins
-RUN wget -q https://nexus.pentaho.org/repository/omni/org/pentaho/di/pdi-plugins/$dist/pdi-plugins-$dist.zip && \
-  unzip -q pdi-plugins-$dist.zip && \
-  rm pdi-plugins-$dist.zip
-
-# samples
-RUN wget -q https://nexus.pentaho.org/repository/proxy-pentaho-public-release-group/org/pentaho/di/pdi-samples/$dist/pdi-samples-$dist.zip && \
-  unzip -q pdi-samples-$dist.zip && \
-  rm pdi-samples-$dist.zip
+COPY install-base.sh /tmp/install-base.sh
+RUN sh /tmp/install-base.sh
