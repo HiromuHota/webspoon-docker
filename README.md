@@ -1,8 +1,7 @@
 # How to build an image
 
 ```
-$ docker build --no-cache -f ./Dockerfile-base -t hiromuhota/webspoon:0.8.2-base .
-$ docker build --no-cache -f ./Dockerfile-full -t hiromuhota/webspoon:latest .
+$ docker build --no-cache -t hiromuhota/webspoon:latest .
 ```
 
 # Tags
