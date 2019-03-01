@@ -1,15 +1,15 @@
 FROM tomcat:jre8
 MAINTAINER Hiromu Hota <hiromu.hota@hal.hitachi.com>
 ENV JAVA_OPTS="-Xms1024m -Xmx2048m"
-ARG base=8.2
-ARG patch=18
-ARG version=0.$base.$patch
-ARG dist=8.2.0.0-342
-
 RUN rm /etc/java-8-openjdk/accessibility.properties
 RUN rm -rf ${CATALINA_HOME}/webapps/* \
     && mkdir ${CATALINA_HOME}/webapps/ROOT \
     && echo "<% response.sendRedirect(\"spoon\"); %>" > ${CATALINA_HOME}/webapps/ROOT/index.jsp
+
+ARG base=8.2
+ARG patch=18
+ARG version=0.$base.$patch
+ARG dist=8.2.0.0-342
 
 RUN wget https://sourceforge.net/projects/pentaho/files/Pentaho%20$base/client-tools/pdi-ce-$dist.zip && \
   unzip pdi-ce-$dist.zip && \
