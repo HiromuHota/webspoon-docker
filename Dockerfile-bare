@@ -4,6 +4,7 @@ ENV JAVA_OPTS="-Xms1024m -Xmx2048m"
 RUN rm -rf ${CATALINA_HOME}/webapps/* \
     && mkdir ${CATALINA_HOME}/webapps/ROOT \
     && echo "<% response.sendRedirect(\"spoon\"); %>" > ${CATALINA_HOME}/webapps/ROOT/index.jsp
+RUN apk add --no-cache fontconfig ttf-dejavu
 
 ARG base=8.2
 ARG patch=18
