@@ -21,6 +21,8 @@ RUN wget https://sourceforge.net/projects/pentaho/files/Pentaho%20$base/client-t
   rm pdi-ce-$dist.zip && \
   rm -rf data-integration
 
+ARG CACHEBUST=1
+
 RUN echo "org.apache.tomcat.util.buf.UDecoder.ALLOW_ENCODED_SLASH=true" | tee -a conf/catalina.properties
 COPY install.sh /tmp/install.sh
 RUN sh /tmp/install.sh
