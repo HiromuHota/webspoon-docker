@@ -1,0 +1,13 @@
+branches:
+  only:
+    - master
+language: java
+sudo: false
+jdk: oraclejdk8
+install: true
+script:
+  - git config --local user.name "Hiromu Hota"
+  - git config --local user.email "hiromu.hota@hal.hitachi.com"
+  - export TRAVIS_TAG=nightly
+  - git tag $TRAVIS_TAG --force
+  - git push -f https://${GITHUB_TOKEN}@github.com/${TRAVIS_REPO_SLUG}.git $TRAVIS_TAG
