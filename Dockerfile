@@ -11,8 +11,8 @@ ARG patch=18
 ARG version=0.$base.$patch
 ARG dist=8.2.0.0-342
 
-RUN wget https://sourceforge.net/projects/pentaho/files/Pentaho%20$base/client-tools/pdi-ce-$dist.zip && \
-  unzip pdi-ce-$dist.zip && \
+RUN wget -q https://sourceforge.net/projects/pentaho/files/Pentaho%20$base/client-tools/pdi-ce-$dist.zip && \
+  unzip -q pdi-ce-$dist.zip && \
   mv data-integration/system ${CATALINA_HOME}/system && \
   mv data-integration/plugins ${CATALINA_HOME}/plugins && \
   mv data-integration/simple-jndi ${CATALINA_HOME}/simple-jndi && \
