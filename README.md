@@ -39,11 +39,11 @@ hiromuhota/webspoon
 
 ### User config and data persistence/share
 
-If the configuration files should be shared among containers, add `-v kettle:/root/.kettle -v pentaho:/root/.pentaho` as
+If the configuration files should be shared among containers, add `-v kettle:/home/tomcat/.kettle -v pentaho:/home/tomcat/.pentaho` as
 
 ```
 $ docker run -d -p 8080:8080 \
--v kettle:/root/.kettle -v pentaho:/root/.pentaho \
+-v kettle:/home/tomcat/.kettle -v pentaho:/home/tomcat/.pentaho \
 hiromuhota/webspoon
 ```
 
@@ -69,8 +69,8 @@ Similarly, `$CATALINA_HOME/webapps/spoon/WEB-INF/spring/security.xml` can be con
 
 ### Security manager
 
-To enable the [custom security manager](https://github.com/HiromuHota/pentaho-kettle/wiki/Security#file-access-control-by-a-custom-security-manager-experimental), enable [user authentication
-](https://github.com/HiromuHota/pentaho-kettle#user-authentication) and add `-e CATALINA_OPTS="-Djava.security.manager=org.pentaho.di.security.WebSpoonSecurityManager -Djava.security.policy=/usr/local/tomcat/conf/catalina.policy"` to the run command.
+To enable the [custom security manager](https://github.com/HiromuHota/pentaho-kettle/wiki/Admin%3A-Security#file-access-control-by-a-custom-security-manager-experimental), enable [user authentication
+](https://github.com/HiromuHota/pentaho-kettle/wiki/Admin%3A-Security#user-authentication) and add `-e CATALINA_OPTS="-Djava.security.manager=org.pentaho.di.security.WebSpoonSecurityManager -Djava.security.policy=/usr/local/tomcat/conf/catalina.policy"` to the run command.
 
 ```
 $ docker run -d -p 8080:8080 \

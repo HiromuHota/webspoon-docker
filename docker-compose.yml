@@ -5,8 +5,8 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - kettle:/root/.kettle
-      - pentaho:/root/.pentaho
+      - kettle:/home/tomcat/.kettle
+      - pentaho:/home/tomcat/.pentaho
     environment:
       - "JAVA_OPTS=-Xms1024m -Xmx2048m"
 volumes:
