@@ -6,7 +6,7 @@ $ docker build --no-cache -t hiromuhota/webspoon:latest .
 
 # Tags
 
-| Tag | 0.8.1.ZZ and lower | 0.8.2.ZZ | 0.9.0.ZZ and higher |
+| Tag | 0.8.1.ZZ and lower | 0.8.2.ZZ | 0.8.3.ZZ and higher |
 | --- | --- | --- | --- |
 | nightly | Latest commit of webSpoon without plugins | Latest commit of webSpoon with plugins | <-- Ditto |
 | nightly-full | Latest commit of webSpoon with plugins | Identical to nightly, but deprecated | Discontinued |
