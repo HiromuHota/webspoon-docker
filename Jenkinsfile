@@ -13,11 +13,9 @@ pipeline {
     }
     stage('Publish') {
       steps {
-        withDockerRegistry([ credentialsId: "4df8ec3b-c6ab-4ea8-adc7-01328b7b3154", url: "" ]) {
           sh '''
             docker push hiromuhota/webspoon:$version
           '''
-        }
       }
     }
   }
