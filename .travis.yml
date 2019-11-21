@@ -2,8 +2,7 @@ branches:
   only:
     - master
 language: java
-sudo: false
-jdk: oraclejdk8
+jdk: openjdk8
 install: true
 script:
   - git config --local user.name "Hiromu Hota"
