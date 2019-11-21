@@ -7,7 +7,7 @@ RUN rm -rf ${CATALINA_HOME}/webapps/* \
     && echo "<% response.sendRedirect(\"spoon\"); %>" > ${CATALINA_HOME}/webapps/ROOT/index.jsp
 
 ARG base=8.3
-ARG patch=19
+ARG patch=20
 ARG version=0.$base.$patch
 ARG dist=8.3.0.0-371
 
