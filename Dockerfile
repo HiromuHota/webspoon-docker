@@ -5,10 +5,10 @@ RUN rm -rf ${CATALINA_HOME}/webapps/* \
     && mkdir ${CATALINA_HOME}/webapps/ROOT \
     && echo "<% response.sendRedirect(\"spoon\"); %>" > ${CATALINA_HOME}/webapps/ROOT/index.jsp
 
-ARG base=8.3
-ARG patch=20
+ARG base=9.0
+ARG patch=21
 ARG version=0.$base.$patch
-ARG dist=8.3.0.0-371
+ARG dist=9.0.0.0-423
 
 RUN groupadd -r tomcat \
     && useradd -r --create-home -g tomcat tomcat \

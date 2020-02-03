@@ -29,7 +29,7 @@ echo 'Configuring org.pentaho.requirejs.cfg'
 echo 'context.root=/spoon/osgi' | tee ${CATALINA_HOME}/system/karaf/etc/org.pentaho.requirejs.cfg
 
 echo 'Configuring custom.properties'
-wget -q https://raw.githubusercontent.com/HiromuHota/pentaho-karaf-assembly/webspoon%2F$version/pentaho-karaf-assembly/src/main/filtered-resources/etc/custom.properties -O ${CATALINA_HOME}/system/karaf/etc/custom.properties || exit $?
+wget -q https://raw.githubusercontent.com/HiromuHota/pentaho-karaf-assembly/webspoon%2F$version/assemblies/common-resources/src/main/resources-filtered/etc/custom.properties -O ${CATALINA_HOME}/system/karaf/etc/custom.properties || exit $?
 
 echo 'Configuring Carte'
 mkdir ${CATALINA_HOME}/system/kettle
