@@ -12,6 +12,7 @@ rm spoon.war
 
 echo 'Downloading and replacing plugins'
 wget -q https://github.com/HiromuHota/pdi-platform-utils-plugin/releases/download/webspoon%2F$version/pdi-platform-utils-plugin-core-$dist.jar -O ${CATALINA_HOME}/plugins/platform-utils-plugin/pdi-platform-utils-plugin-core-$dist.jar || exit $?
+wget -q https://github.com/HiromuHota/big-data-plugin/releases/download/webspoon%2F$version/hadoop-cluster-ui-$dist.jar -O ${CATALINA_HOME}/system/karaf/system/pentaho/hadoop-cluster-ui/$dist/hadoop-cluster-ui-$dist.jar || exit $?
 wget -q https://github.com/HiromuHota/pentaho-kettle/releases/download/webspoon%2F$version/repositories-plugin-core-$dist.jar -O ${CATALINA_HOME}/system/karaf/system/org/pentaho/di/plugins/repositories-plugin-core/$dist/repositories-plugin-core-$dist.jar || exit $?
 wget -q https://github.com/HiromuHota/pentaho-kettle/releases/download/webspoon%2F$version/pdi-engine-configuration-ui-$dist.jar -O ${CATALINA_HOME}/system/karaf/system/org/pentaho/di/plugins/pdi-engine-configuration-ui/$dist/pdi-engine-configuration-ui-$dist.jar || exit $?
 wget -q https://github.com/HiromuHota/pentaho-kettle/releases/download/webspoon%2F$version/file-open-save-core-$dist.jar -O ${CATALINA_HOME}/system/karaf/system/org/pentaho/di/plugins/file-open-save-core/$dist/file-open-save-core-$dist.jar || exit $?
