@@ -1,4 +1,4 @@
-# Run webspoon on Kubernetes
+# Run webSpoon on Kubernetes
 
 Clone this repository and run this command to create required resources (`Deployment` and `Service`).
 
