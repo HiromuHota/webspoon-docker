@@ -28,16 +28,16 @@ While port forwarding, access to the port of local machine.
 http://localhost:8080
 ```
 
-# Shared `.kettle` and `.pentaho` directory
+# Shared `~/.kettle` and `~/.pentaho` directory
 
-Pods share `.kettle` and `.pentaho` directory as PersistentVolumeClaim (PVC).
-If you want to deploy these PVCs to a Kubernetes cluster with multiple nodes, you can configure YAML files so that they can be shared among multiple nodes.
+Pods share `~/.kettle` and `~/.pentaho` directory as PersistentVolumeClaim (PVC).
+If you want to deploy these PVCs to a Kubernetes cluster which only supports `ReadWriteOnce`, you can configure YAML files.
 
 Edit `kettle-pvc.yaml` and `pentaho-pvc.yaml`.
 
 ```yaml
-  # - ReadWriteOnce # Comment out
-  - ReadWriteMany # Uncomment
+  # - ReadWriteMany # Comment out
+  - ReadWriteOnce # Uncomment
 ```
 
 # Customize
