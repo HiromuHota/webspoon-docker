@@ -1,11 +1,7 @@
 # Notice
 
-<blockquote class="well alert-block alert-danger">
-<big>
 This repository has been archived and read-only now.
 All the contents have been migrated to under ./docker directory of https://github.com/HiromuHota/pentaho-kettle.
-</big>
-</blockquote>
 
 # How to build an image
 
